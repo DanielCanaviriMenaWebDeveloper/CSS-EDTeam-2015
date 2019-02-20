@@ -1,0 +1,91 @@
+/*
+    LOS SELECTORES INDICAN A QUÉ ELEMENTOS HTML APLICAR LOS ESTILOS
+*/
+
+/* 
+    1. SELECTORES DE ETIQUETA
+    Se aplican a elementos HTML. Basta indicar el nombre de la etiqueta.
+
+    body {
+        color: red;
+    }
+
+    h1 {
+        color: green;
+    }
+
+    A los estilos aplicados a los selectores de etiquetas se les conoce como estilos base (Metodologia SMACSS).
+*/
+
+body {
+    background: grey;
+}
+
+/* 
+    2. SELECTORES DE CLASE
+
+    Las clases son atributos de HTML que se indican con class="" Estas clases se usan para manipular el HTML con CSS o JS.
+
+    Para seleccionar una clase con CSS se utiliza un punto seguido del nombre de la clase.
+
+    HTML
+
+    <p class="alerta">Ha sucedido un error</p>
+
+    CSS
+
+    .alerta {
+        background: red;
+        color: white;
+    }
+*/
+
+.alerta {
+    background: red;
+    color: white;
+}
+
+/* 
+    3. SELECTORES DE ID
+
+    Se selecciona un id con el simbolo # seguido del nombre del id. Puesto que los id son unicos en HTML, no es recomendable usar id en el css.
+
+    HTML
+    <h1 id="titulo">Curso CSS Desde Cero</h1>
+
+    CSS
+    #titulo {
+        color: yellow;
+    }
+*/
+#titulo {
+    color: yellow;
+}
+
+/* 
+    NOTAS
+
+    1. Los id se usan para crear marcadores en HTML o para manipular el DOM con JavaScript. Pero no se recomienda para css.
+
+    2. Las clases se pueden usar con CSS o con JavaScript.
+    Por lo cual una buena práctica es nombrar con el prefijo js- a las clases para JavaScript.
+
+        <ul class = menu js-menu></ul>
+    
+    3. Las clases y los id pueden unificarse en el selector.
+    Esto significa que podrias seleccionar a elementos que tengan dos clases o una clase y un id, o una etiqueta y una clase, etc.
+
+        .menu.header {
+            color: ;
+        }
+*/
+
+.menu.header {
+    background: rgb(38, 140, 150);
+    color: blue;
+}
+
+p.mensaje#inicial {
+    background: greenyellow;
+    color: coral;
+}

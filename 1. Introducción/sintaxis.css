@@ -1,0 +1,55 @@
+/* 
+    Sintaxis de CSS
+
+    1. Regla (rule)
+        Es un bloque de instrucciones css. Comienza con un selector y termina con una llave de cierre. Su estructura es asi:
+
+            selector {
+                codigo css
+            }
+        
+        Hay ciertos tipos de reglas que inician con @ a las que se les conoce como at-rules. Ejemplo:
+
+        @media {
+        
+        }
+        @font-fac{
+        
+        }
+        @keyframes{
+        
+        }
+
+    2. Selector
+        Indican a que elemento HTML se va a aplicar el estilo.
+        Ejemplo:
+
+        p {
+            estilos (se aplicara a los parrafos)
+        }
+
+    3. Declaración (y bloque de declaración)
+        Una declaracion es un estilo especifico. Y se conforma por una propiedad (que es el estilo a manipular) y el valor (que es el "valor" que tomará ese estilo). Ejemplo:
+
+        p {
+            color: red;
+        }
+
+        En otras palabras, una declaracion es una pareja de propiedad y valor. Su sintaxis es:
+
+            propiedad: valor;
+        
+        El valor y la propiedad se separan por dos puntos. Y la declaracion se termina con punto y coma.
+
+        * Nota 1: El conjunto de todas las declaraciones encerradas entre llaves, se conoce como "bloque de declaracion (declaration block)".
+
+        * Nota 2: Tradicionalmente una propiedad tomaba un valor. Sin embargo en CSS3 existen varias propiedades que pueden tomar múltiples valores:
+
+            propiedad: valor1, valor2, valor3, valor4;
+
+    4. Propiedad
+        Se explico en la declaracion
+
+    5. Valor
+        Se explico en la declaracion
+*/
