@@ -18,7 +18,7 @@
 */
 
 body {
-    background: grey;
+    background: rgb(231, 221, 221);
 }
 
 /* 
@@ -89,3 +89,69 @@ p.mensaje#inicial {
     background: greenyellow;
     color: coral;
 }
+
+/* 
+    SELECTORES DESCENDIENTES
+
+    Se aplican a un elemento siempre que sea hijo de otro. Su sintaxis es asi:
+
+    ancestro descendiente {
+    
+    }
+
+    * No importa el nivel del descendiente
+    * Siempre se debe intentar descender lo menos posible
+*/
+
+/* ul a {
+    color:blueviolet;
+} */
+
+/* ul ul a {
+    color: rgb(23, 110, 182);
+} */
+
+/* 
+    ANIDAR SELECTORES
+
+    Consisten en separar selectores por comas. De esta manera los estilos se aplican a todos los selectores.
+
+    Ayuda a evitar el DRY: Dont Repeat Youself (No te repitas)
+*/
+
+/* h1, p , ul {
+    font-size: 15px;
+} */
+
+/* 
+    SELECTOR DE HIJO DIRECTO:
+
+    Selecciona solo a los elementos que estan dentro directamente de otro elemento.
+
+    padre > hijo {
+
+    }
+*/
+
+/* Esta es una forma de colocar estilos pero no se recomienda usar el body */
+body > ul > li > a {
+    color: rgb(211, 25, 228);
+}
+
+/* 
+    Otra forma usando clases que es la mas recomendable 
+    La mejor practica es utilizar clases y evitar muchos selectores descendientes.
+*/
+.level-1 {
+    background: black;
+    color: blueviolet;
+}
+
+.level-2 {
+    background: rgb(243, 90, 1);
+    color: rgb(223, 226, 43);
+}
+
+
+
+
