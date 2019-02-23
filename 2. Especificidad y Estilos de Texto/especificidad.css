@@ -1,0 +1,102 @@
+/* 
+    Herencia:
+
+    El valor inherit fuerza a un elemento a heredar la propiedad correspondiente de su ancestro mas cercano.
+*/
+body {
+    background: #ffffff;
+}
+
+p {
+    color: rgba(185, 8, 176, 0.76);
+}
+
+/* Todos los enlances que sean descendientes de un parrafo heredan la propiedad correspondiente al ancestro parrafo */
+p a {
+    color: inherit;
+}
+
+/* Todos los enlaces heredan la propiedad correspondiente a su ancestro en este caso el ancestro llegaria a ser <li> para el ejemplo en el documento HTML */
+
+li {
+    color: rgb(36, 216, 240);
+}
+
+li a {
+    color: inherit;
+}
+
+/* 
+    ESPECIFICIDAD
+    
+    Es un valor que adquieren los selectores y que determinan que regla CSS (o que estilos) se aplican a un elemento cuando existen conflictos.
+
+    La especificidad se prioriza antes que la cascada
+       * El selector de clase se prioriza por encima del selector de etiqueta
+       * El selector de id se prioriza por encima del selector de clase y del selector de etiqueta
+       * Los estilos en linea le ganan a la especificidad y a la cascada 
+       * Y por encima de todos esta el valor !important en una propiedad.
+
+    !important siempre gana sobre cualquier especificidad.
+    Por eso se lo considera una mala práctica.
+
+    En caso de que exista mas de un !important se prioriza de la misma forma que los comentarios anteriores
+
+    !important > especificidad > cascada
+
+    Si dos elementos tienen la misma especificidad en ese caso gana la cascada.
+
+    ¿Como se calcula la especificidad?
+
+    Etiqueta              ->1     = 0,0,0,1
+    Clases y seudoclases  ->10    = 0,0,1,0
+    ID                    ->100   = 0,1,0,0
+    Estilos en línea      ->1000  = 1,0,0,0
+
+
+*/
+html body p.parrafo#parrafo {
+    /* 1+1+1+10+100 = 113 */
+    color: blue;
+}
+
+body p.parrafo#parrafo {
+    /* Especificidad 1+1+10+100 = 112 */
+    color: rgb(231, 96, 123);
+}
+
+.parrafo#parrafo {
+    /* Especificidad 10+100 = 110 */
+    color: blueviolet;
+}
+
+p.parrafo#parrafo {
+    /* Especificidad 1+10+100 = 111 */
+    color: aqua;
+}
+
+.parrafo {
+    /* Especificidad 10 */
+    color: steelblue;
+}
+
+p#parrafo {
+    /* Especificidad 100 + 1 = 101 */
+    color: rgb(9, 117, 81);
+}
+
+#parrafo {
+    /* Especificidad 100 */
+    color: red;
+}
+        
+p {
+    /* Especificidad 1 */
+    color: rgb(246, 108, 16);
+}
+
+
+       
+       
+
+
