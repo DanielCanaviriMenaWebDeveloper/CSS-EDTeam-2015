@@ -1,0 +1,65 @@
+/* Selectores de atributos 
+    Un atributo se selecciona entre corchetes []
+
+*/
+
+
+/* Selecciona el elemento que tenga el atributo class */
+
+
+/* [class] {
+    color: red;
+} */
+
+/* Se puede indicar solo al atributo */
+[target="_blank"] {
+    font-style: italic;
+    color: green;
+}
+
+[target="_blank"]:after {
+    content: "abre en pestaña nueva";
+    margin-left: .5em;
+    font-size: .6em;
+    position: relative;
+    top: -.5em;
+}
+
+/* 
+    Los selectores de atributos aceptan comodines:
+
+    $   -> termina con
+    ^   -> comienza con (alt + 94)
+    *   -> contiene a
+
+    Ej.:
+
+        [src$="jpg"]
+        [href^="http://"]
+        [class*="icon-"]
+*/
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+[src$="jpg"] {
+    border: 5px solid black;
+}
+
+img[src$="png"] {
+    border: 5px solid rgb(13, 171, 219);
+}
+
+[class^="parrafo-"] {
+    color: rgb(12, 9, 184);
+    font-size: 1.5em;
+}
+
+[class*="parrafo-"] {
+    color: rgb(139, 6, 46);
+    font-size: 2em;
+} 
+
+/* El selector de atributo no distingue si el valor del atributo esta compuesto por mas de 2 clases, en si lo toma como una cadena */

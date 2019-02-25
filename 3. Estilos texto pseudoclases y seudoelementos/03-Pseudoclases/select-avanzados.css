@@ -1,0 +1,91 @@
+body {
+    margin-bottom: 15em;
+}
+/* 
+    Selectores Avanzados 
+
+    :first-child
+    :last-child
+        Selecciona al primer hijo y ultimo hijo de un elemento (sin importar que tipo de elemento es)
+
+    :first-of-type
+    :last-of-type
+        Selecciona al primer y ultimo hijo segun el elemento.
+        Ej.
+        p:first-of-type (selecciona al primer parrafo hijo)
+
+    :nth-child()      -> (para todos los hijos)
+    :nth-of-type()    -> (filtra por tipo)
+        Reciben parámetros
+            número           -> 5 (selecciona al 5to elemento)
+            multiplo de n    -> 2n (selecciona de 2 en 2)
+            formula          -> 3n+1 (selecciona a 1,4,7)
+                                    para 0 = 3*0+1=1
+                                    para 1=  3*1+1=4
+                                    para 2=  3*2+1=7 .....
+            even/odd         -> pares e impares
+    
+        Trucos: 
+            seleccionar los primeros 4 elementos:       -n+4
+            seleccionar los elementos a partir del 4:    n+4
+    
+    :nth-last-child()
+    :nth-last-of-type()
+        Identico a nth-child() y nth-of-type() pero se cuentan al final
+*/
+
+
+/* Aplica el estilo al primer hijo del elemento article */
+/* article :first-child {
+    color: rgb(139, 51, 156);
+} */
+
+/* Aplica el estilo al ultimo hijo del elemento article */
+/* article :last-child {
+     color: blue;
+} */
+
+/* Aplica estilos al parrafo siempre y cuando sea el ultimo hijo, no importa de quien */
+/* p:last-child {
+    color: green;
+} */
+
+/* Aplica estilos al parrafo que sea el ultimo hijo de un grupo de parrafos */
+/* p:last-of-type {
+    color: yellow;
+    background: black;
+} */
+
+/* Aplica estilos al parrafo que sea el primer hijo de un grupo de parrafos */
+/* p:first-of-type {
+    color: blueviolet;
+    background: black;
+} */
+
+/* Para todos los hijos, si es un parrafo y es el 2do hijo le aplica el estilo caso contrario no  */
+p:nth-child(2) {
+    color: red;
+}
+
+/* Para los hijos de tipo parrafo, al 3er hijo le aplica el estilo */
+p:nth-of-type(3) {
+    color: blue;
+}
+
+/* Tambien acepta palabras claves (iden=pares) (odd=impares) */
+/* li:nth-child(2n+1) {
+    background: teal;
+    color: #fff;
+} */
+
+/* Selecciona desde el elemento 4 los pares */
+/* li:nth-child(n+3):nth-child(even) {
+    background: teal;
+    color: #fff;
+} */
+
+li:nth-last-child(-n+4) {
+    color: red;
+}
+
+
