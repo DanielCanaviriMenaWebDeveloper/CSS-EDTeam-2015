@@ -1,0 +1,70 @@
+/* 
+    La propiedad overflow determina la visibilidad del contenido que desborde del contenedor.
+
+    overflow:
+        visible (default)
+        hidden (oculto)
+            oculta el contenido desbordado
+        auto
+            crea un scroll de ser necesario
+        scroll
+            crea un scroll siempre
+
+    Novedades en CSS3
+        overflow-x
+        overflow-y
+    
+    Además se pueden pasar dos valores a overflow:
+
+        overflow: valorx valory;
+*/
+
+.container1 {
+    width: 300px;
+    height: 100px;
+    background: yellow;
+    margin-bottom: 5em;
+}
+
+.content {
+    width: 400px;
+    font-size: 1.4em;   
+}
+
+.content4 {
+    width: 400px;
+    font-size: .8em;
+}
+
+.container2 {
+    width: 300px;
+    height: 100px;
+    background: yellow;
+    margin-bottom: 5em;
+    overflow: hidden;
+}
+
+.container3 {
+    width: 300px;
+    height: 100px;
+    background: yellow;
+    margin-bottom: 5em;
+    overflow: auto
+}
+
+.container4 {
+    width: 300px;
+    height: 100px;
+    background: yellow;
+    margin-bottom: 5em;
+    overflow: scroll;
+}
+
+.container5 {
+    width: 300px;
+    height: 100px;
+    background: yellow;
+    margin-bottom: 5em;
+    overflow: hidden scroll;
+}
+

@@ -1,0 +1,66 @@
+/* 
+    Float saca a un elemento del flujo y lo envia a la derecha o a la isquierda. El elemento siguiente lo envolverá de ser posible.
+
+    float:
+        right
+        left
+        none
+*/
+
+.container {
+    background: yellow;
+    /* overflow: hidden; */
+}
+
+.container2 {
+    background: yellow;
+    overflow: hidden; /* Recomendado */
+    /* display: table; */
+}
+.img1 {
+    float: left;
+    margin-right: 1em;
+}
+
+.img2 {
+    float: right;
+    margin-left: 1em;
+}
+
+/* 
+    El contenedor de un elemento flotado deja de contenerlo. Para solucionarlo:
+
+        1. overflow: hidden;
+        2. display: table;
+        3. clearfix con un div vacio (no recomendada)
+        4. crearfix con pseudoelementos (recomendada)
+*/
+
+.espacio-top {
+    margin-top: 7em;
+}
+
+/* 
+    La propiedad clear se usa para que un elemento no reciba elementos flotados a sus lados.
+
+    clear:
+        left
+        right
+        both
+*/
+
+.container3 {
+    margin-top: 10px;
+    background: rgb(27, 140, 185);
+    overflow: hidden;
+}
+
+.img3 {
+    float: right;
+    margin-left: 1em;
+}
+
+/* El elemento parrafo no deja que un elemento flote a su lado  */
+.parrafo3 {
+    clear: right;
+}

@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+.gallery-container {
+    /* line-height: 0; */  /* Quita el espacio entre las imagenes */
+    float: left;
+    width: 23%;
+    margin: 1%;
+    border: 1px solid #ccc;
+    padding: 3px;
+}
+
+.gallery-item {
+    display: block; /* Otra forma de quitar el espacio entre las imagenes */
+    width: 100%;
+}

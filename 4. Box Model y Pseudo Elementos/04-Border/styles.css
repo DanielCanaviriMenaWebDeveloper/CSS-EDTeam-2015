@@ -1,0 +1,121 @@
+/* 
+    BORDER
+
+    Border esta dividido en varias propiedades del tipo:
+
+    border-top-width:
+    border-bottom-style:
+    border-left-color:
+
+    Entonces existen 4 caractersiticas para definir un borde:
+
+        color
+        width (grosor)
+        style (tipo)
+        posicion (top, left, ...)
+    
+    Sobre la posicion se pueden usar los mismos principios usados en margin y padding (comenzar arriba, moverse en sentido horario, etc).
+
+    Entonces:
+
+        border-color: green;
+        border-style: solid dashed;
+        border-width: 3px 5px 2px;
+
+    Valores de border-style:
+
+        solid   (linea solida)
+        dashed  (segmentos de linea)
+        dotted  (puntos)
+        double  (linea doble)
+        ridge
+        inset
+        outset
+*/
+
+[class^="border"] {
+    background: rgb(32, 179, 199);
+    height: 150px;
+    margin-bottom: 2em;
+}
+
+.border-1 {
+    border-color: rgb(1, 10, 8) rgb(44, 56, 214) rgb(234, 0, 255);
+    border-width: 10px 15px 8px;
+    border-style: solid inset;
+}
+
+/* 
+    Existen shortand para cada posición:
+
+    border-top:    width style color
+    border-bottom: width style color
+    border-left:   width style color
+    border-right:  width style color
+
+    Sus valores:
+        width style color
+*/
+
+.border-2 {
+    border-top: 10px solid red;
+    border-bottom: 15px dashed green;
+}
+
+/* 
+    El shorthand border se aplica a los cuatro lados
+
+    border: width style color;
+*/
+
+.border-3 {
+    border: 8px dotted black;
+}
+
+/* 
+    Border radius
+
+    Forma individual:
+
+        border-top-left-radius: x y;
+        border-top-right-radius: x y;
+        border-bottom-right-radius: x,y;
+        border-bottom-left-radius: x y;
+
+    El valor de x es el radio en horizontal
+    El valor de y es el radio en vertical 
+    Si se indica un solo valor es para x e y
+
+    El shorthand border-radius funciona igual que el margin para las proporciones. Con la diferencia de que se empieza a contar en la esquina superior iz<quierda  
+
+    Si se quiere definir el radio en x e y en el shorthand se debe separar con un slash (/).
+
+    Ej.
+
+        border-radius: valorx / valory;
+*/
+
+.border-4 {
+    border-top-left-radius: 100px 50px;
+    border: 1px solid black;
+}
+
+.border-5 {
+    border: 1px solid black;
+    border-radius: 50px 100px 150px 200px;/* Cada valor representa al mismo valor en x e y*/
+}
+
+.border-6 {
+    border: 1px solid black;
+    border-radius: 100px 200px;
+}
+
+.border-7 {
+    border: 1px solid black;
+    border-radius: 50px / 25px; /* Para todas las esquinas 50px en x, 25 px en y */
+}
+
+.border-8 {
+    border: 1px solid black;
+    border-radius: 50px 100px / 30px; /* 50px en x a la 1ra esquina y su contrario, 100px en x a la segunda esquina y su contrario, 30px en y a todas las esquinas */
+}

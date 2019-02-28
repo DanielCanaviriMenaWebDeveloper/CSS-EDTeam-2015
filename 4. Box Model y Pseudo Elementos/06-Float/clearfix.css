@@ -1,0 +1,22 @@
+[class^="container"] {
+    background: yellow;
+    /* display: table; */
+    margin-bottom: 1em;
+}
+
+[class^="img"] {
+    float: right;
+    margin-left: 1em;
+}
+
+.parrafo2 {
+    clear: right;
+}
+
+
+/* Pseudoelemento que crea un div vacio que no permite elementos flotantes arriba ni abajo */
+.clearfix:before,.container::after {
+    content: "";
+    display: table; /* Limpia los floats */
+    clear: both;
+}

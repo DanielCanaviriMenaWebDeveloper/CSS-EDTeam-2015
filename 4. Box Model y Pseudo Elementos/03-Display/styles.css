@@ -1,0 +1,99 @@
+/* 
+    DISPLAY
+
+    Es una propiedad que define como se comportará una caja.
+    De forma predeterminada existen dos tipos de elementos:
+
+        block-level
+        inline-level
+    
+    
+    Los elementos inline:
+        1. No aceptan width y height
+        2. Aceptan margen y padding pero no altera el flujo los verticales, los horizontales si lo alteran.
+    
+*/
+
+.inline {
+    background: yellow;
+    width: 100px;
+    height: 50px;
+    padding: 1em;
+    margin: 1em;
+} 
+
+.block {
+    background: pink;
+    width: 500px;
+    height: 50px;
+    /* display: inline; */ /* Convierte un elemento de bloque a inline */
+}
+
+/* 
+    VALORES DE DISPLAY
+
+        display:
+            inline (default)
+            block
+            inline-block
+                A un mismo elemento le da las propiedades de un elemento inline (facilidad de ponerte en linea con otros o ser parte de un elemento mayor de bloque) y de un elemento block (ya puedes tener un width y height).
+            table
+                Imita el layout de una tabla 
+                Propiedades:
+                    table-row
+                    table-cell
+                    table-caption
+                    table-header-group
+                    table-footer-group
+            none
+
+        CSS3:
+            flex (Recomendado para componentes)
+            grid (Recomendado para el Layout)
+*/
+
+.inline1 {
+    background: yellow;
+    width: 100px;
+    height: 50px;
+    padding: 1em;
+    margin: 1em;
+    display: inline-block;
+} 
+
+.block1 {
+    background: pink;
+    width: 500px;
+    /* height: 50px; */
+    /* display: none; */ /* Ejemplo de uso del display: none; */
+}
+
+.table {
+    display: table;/* Hace que las cajas se ajusten al contenido, pero mantienen las propiedades de block */
+}
+.caption {
+    display:table-caption;
+}
+.cell {
+    display: table-cell;/* Hace que los elementos dentro el contenedor principal se coloque en columnas */
+}
+.cell:nth-child(even){
+    background: yellow;
+}
+
+.cell:nth-child(odd){
+    background: pink;
+}
+
+.footer {
+    display: table-footer-group;
+}
+
+/* 
+    diplay: none;
+        desaparece un elemento del flujo
+        igual se carga el elemento (y sus assets=recurso externo Ej. Imagenes).
+    
+    visibility: hidden; 
+        desaparece el elemento pero mantiene el flujo(spacio que ocupa un elemento)
+*/

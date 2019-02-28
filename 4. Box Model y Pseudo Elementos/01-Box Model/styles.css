@@ -1,0 +1,83 @@
+/* 
+    ¿Qué es el box model?
+        El conjunto de algoritmos por los cuales el navegador dibuja una caja en pantalla con todas sus propiedades.
+    
+    ¿Qué es una caja?
+        Es un rectangulo definido por todo elemento al renderizarse la página.
+
+    Elementos de una caja
+
+    INTERNOS
+        content (content-box)
+            el contenido
+        padding (padding-box)
+            espacio entre el contenido y el limite de la caja
+        border  (border-box)
+            linea que se dibuja alrededor de la caja
+    EXTERNOS
+        margin
+            separación entre una caja y las adyacentes
+    
+    ¿Como se definen las dimenciones de una caja?
+
+        Normalmente, las dimenciones son:
+        dimenciones declaradas + padding total + borde total
+        (content box + padding box + border box)
+
+        Si las dimenciones no estan declaradas, lo normal es:
+
+        ancho
+            total del contenedor (bloque)
+            total del contenido (inline)
+        
+        alto
+            definido por su contenido
+    
+    Propiedad box-sizing (tamaño de caja - propiedad de CSS3) 
+        
+        Controla como interpreta el tamaño de la caja.
+        Sus valores son 
+            content-box (default)
+            padding-box 
+            border-box (recomendado, el padding y el border se calculan por dentro)
+
+        Recomendación 
+
+        Asignar box-sizing: border-box; a todos los elementos siempre.
+
+        * {
+            box-sizing: border-box;
+        }
+*/
+
+.box-1 {
+    width: 400px;
+    height: 200px;
+    background: rgb(54, 182, 15);
+    padding: 20px;
+    border: 2px solid black;
+    box-sizing: padding-box;  /* El tamaño de la caja sera igual al tamaño declarado 400x200 */
+}
+
+.box-2-container {
+    width: 500px;
+    background: yellow;
+}
+
+.box-2 {
+    border: 1px solid black;
+    width: 50%;
+    padding-top: 10%; /* Como el ancho del contenedor es 500px el 10% seria 50px. Tener en cuenta que pese a que es una medida vertical se mide respecto al contenedor padre y no a su propio ancho. */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* 
+    DIMENSIONES EN PORCENTAJES
+
+    1. Los porcentajes se calculan respecto al ancho del "contenedor".
+    2. Es imposible definir alturas en porcentajes (con ciertas excepciones, como con alto definido en el padre)
+
+*/
